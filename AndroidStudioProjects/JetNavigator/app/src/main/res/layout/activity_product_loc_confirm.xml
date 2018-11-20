@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_TITLE_TEXTVIEW"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="로케이션"
+                android:gravity="center"/>
+        <EditText
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_EDITTEXT"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_TITLE_TEXTVIEW"/>
+        <Button
+                android:text="조 회"
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_SEARCH_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_EDITTEXT"/>
+
+        <TextView
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_TITLE_TEXTVIEW"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="바코드"
+                android:gravity="center"
+                android:layout_below="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_TITLE_TEXTVIEW"/>
+        <EditText
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_EDITTEXT"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_TITLE_TEXTVIEW"
+                android:layout_below="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_LOC_EDITTEXT"/>
+
+        <Button
+                android:text="초기화"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_EDITTEXT"
+                android:layout_below="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_SEARCH_BTN"/>
+
+        <TextView
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_MESSAGE_TITLE_TEXTVIEW"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="로케이션"
+                android:gravity="center"
+                android:layout_below="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_TITLE_TEXTVIEW"/>
+        <EditText
+                android:id="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_MESSAGE_EDITTEXT"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/PRODUCT_LOC_CONFIRM_ACTIVITY_MESSAGE_TITLE_TEXTVIEW"
+                android:layout_below="@id/PRODUCT_LOC_CONFIRM_ACTIVITY_BARCODE_EDITTEXT"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

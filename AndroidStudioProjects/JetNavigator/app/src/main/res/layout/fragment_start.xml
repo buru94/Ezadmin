@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+        <TextView
+                android:id="@+id/START_FRAGMENT_TITLE_TEXT_VIEW"
+                android:text="My Status"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:textColor="#353535"
+                android:layout_weight="1"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rectangle"/>
+
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:id="@+id/START_FRAGMENT_TABLE_LAYOUT"
+            >
+        <TableRow>
+
+            <TextView
+                    android:text="접수"
+                    android:layout_width="80dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/table_key_rectangle"
+                    style="@style/MyStatus"
+                    android:layout_marginLeft="20dp"/>
+            <TextView
+                    android:text="송장"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/table_key_rectangle"
+                    style="@style/MyStatus"/>
+            <TextView
+                    android:text="배송"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_key_rectangle"
+                    style="@style/MyStatus"
+                    android:layout_marginRight="20dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:text="1건"
+                    android:id="@+id/START_FRAGMENT_REV_TEXT_VIEW"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_value_rectangle"
+                    style="@style/MyStatus"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+            <TextView
+                    android:text="2건"
+                    android:id="@+id/START_FRAGMENT_INVOICE_TEXT_VIEW"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/table_value_rectangle"
+                    style="@style/MyStatus"/>
+            <TextView
+                    android:text="3건"
+                    android:id="@+id/START_FRAGMENT_TRANS_TEXT_VIEW"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_value_rectangle"
+                    style="@style/MyStatus"
+                    android:layout_marginRight="20dp"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+            android:id="@+id/START_FRAGMENT_TODAY_TEXT_VIEW"
+            android:text="TODAY"
+            android:textSize="20dp"
+            android:textColor="#353535"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/START_FRAGMENT_TABLE_LAYOUT"
+            android:background="@drawable/textview_rectangle"/>
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/START_FRAGMENT_TODAY_TABLE_LAYOUT"
+                android:layout_below="@+id/START_FRAGMENT_TODAY_TEXT_VIEW"
+                android:stretchColumns="0,1,">
+            <TableRow>
+                <TextView
+                        android:text="입고"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_key_rectangle"
+                        style="@style/MyStatus"
+                        android:layout_marginLeft="20dp"/>
+                <TextView
+                        android:text="출고"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/table_key_rectangle"
+                        style="@style/MyStatus"
+                        android:layout_marginRight="20dp"/>
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:text="1건"
+                        android:id="@+id/START_FRAGMENT_TODAY_STOCK_IN_TEXT_VIEW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_value_rectangle"
+                        style="@style/MyStatus"
+
+                        android:layout_marginLeft="20dp"/>
+                <TextView
+                        android:text="2건"
+                        android:id="@+id/START_FRAGMENT_TODAY_STOCK_OUT_TEXT_VIEW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_value_rectangle"
+                        style="@style/MyStatus"
+                        android:layout_marginRight="20dp"/>
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
