@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_TOOLBAR"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp">
+        <TextView
+                android:text="송장 : "
+                android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SERACH_TITLE_TEXT_VIEW"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+        <EditText
+                android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_EDIT_TEXT"
+                android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SERACH_TITLE_TEXT_VIEW"
+                android:layout_marginTop="10dp"
+                android:layout_width="250dp"
+                android:layout_height="50dp"/>
+        <Button
+                android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조회"
+                android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_EDIT_TEXT"/>
+
+        <Button
+                android:id="@+id/TRANS_ACTIVITY_RESET_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="초기화"
+                android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_EDIT_TEXT"
+                android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_BTN"/>
+        <Button
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="CS내역보기"
+                android:id="@+id/TRANS_ACTIVITY_CS_LIST_BTN"
+                android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_EDIT_TEXT"/>
+
+        <Button
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:text="보류해제"
+                android:id="@+id/TRANS_ACTIVITY_RESERVE_CANCEL_BTN"
+                android:layout_toRightOf="@id/TRANS_ACTIVITY_CS_LIST_BTN"
+                android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_SEARCH_EDIT_TEXT"/>
+
+        <RelativeLayout
+                android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_VIEW_HEADER"
+                android:layout_below="@+id/TRANS_ACTIVITY_RESERVE_CANCEL_BTN"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#D81B60">
+
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_PRNAME"
+                    android:layout_marginLeft="20dp"
+                    android:text="재고상품명"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"/>
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_OPTIONS"
+                    android:text="옵션"
+                    android:layout_toRightOf="@id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_PRNAME"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"/>
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_PRID"
+                    android:layout_toRightOf="@id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_OPTIONS"
+                    android:text="상품코드"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="90dp"
+                    android:layout_height="20dp"/>
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_BARCODE"
+                    android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_OPTIONS"
+                    android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_PRID"
+                    android:text="바코드"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="90dp"
+                    android:layout_height="20dp"/>
+
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_QTY"
+                    android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_BARCODE"
+                    android:text="갯수"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_SCAN"
+                    android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_QTY"
+                    android:layout_toRightOf="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_HEADER_PRID"
+                    android:text="스캔"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+
+
+        </RelativeLayout>
+
+        <ListView
+                android:id="@+id/TRANS_ACTIVITY_LIST_VIEW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/TRANS_ACTIVITY_PRODUCT_SCAN_LIST_VIEW_HEADER">
+
+        </ListView>
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

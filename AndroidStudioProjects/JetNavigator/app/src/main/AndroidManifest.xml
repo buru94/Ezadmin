@@ -26,7 +26,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name="com.example.pimz.jetnavigator.DeviceListActivity"
                   android:theme="@style/Theme.AppCompat.DayNight.Dialog.MinWidth"/>
-        <activity android:name=".TransActivity"/>
+        <activity android:name=".TransActivity"
+                  android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".StockInOutActivity"
                   android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".StockArrangeActivity"
@@ -48,6 +49,7 @@
         <activity android:name=".ProductListActivity"
                   android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".ProductSearchActivity"
+                  android:windowSoftInputMode="stateAlwaysHidden"
                   android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".SettingsActivity"
                   android:theme="@style/Theme.AppCompat"/>

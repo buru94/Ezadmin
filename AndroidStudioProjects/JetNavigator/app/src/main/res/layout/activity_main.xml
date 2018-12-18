@@ -29,7 +29,7 @@
                 android:layout_height="40dp"/>
         <TextView
                 android:id="@+id/MAIN_ACTIVITY_BARCODE_GUIDE_TEXT_VIEW"
-                android:text="Test your PM3 here"
+                android:text="PM3 테스트"
                 android:textSize="15dp"
                 android:gravity="top"
                 android:textColor="@color/white"

@@ -2,9 +2,7 @@ package com.example.pimz.jetnavigator
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.invoice_listview.*
-import kotlinx.android.synthetic.main.invoice_listview_item.*
 
 
 class StockCheckActivity : AppCompatActivity() {
@@ -18,6 +16,6 @@ class StockCheckActivity : AppCompatActivity() {
 
         val item = Array(20,{ i -> "$i + list" })
 
-        INVOICE_LISTVIEW.adapter = ListViewAdapter(this,item)
+        //INVOICE_LISTVIEW.adapter = ListViewAdapter(this,item)
     }
 }

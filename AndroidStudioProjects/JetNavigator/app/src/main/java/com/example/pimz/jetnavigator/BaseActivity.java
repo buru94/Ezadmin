@@ -4,10 +4,13 @@ package com.example.pimz.jetnavigator;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.net.rtp.RtpStream;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDialog;
 import android.text.TextUtils;
@@ -17,6 +20,18 @@ import android.widget.TextView;
 
 import com.PointMobile.PMSyncService.BluetoothChatService;
 import com.PointMobile.PMSyncService.SendCommand;
+import kr.co.ezapps.ezsmarty.Data;
+import kr.co.ezapps.ezsmarty.Service;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.text.DecimalFormat;
+import java.util.HashMap;
 
 import static com.example.pimz.jetnavigator.MainActivity.mChatService;
 
@@ -25,10 +40,16 @@ public class BaseActivity extends AppCompatActivity{
 
     AppCompatDialog progressDialog;
 
+
     private long time = 0;
     private static final boolean D = true;
     public static final int MESSAGE_BARCODE = 2;
     protected final String TAG = getClass().getSimpleName();
+
+    Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl(URLFactory.serverUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
 
     @Override
     public void onPause() {
@@ -62,26 +83,18 @@ public class BaseActivity extends AppCompatActivity{
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-
                 case MESSAGE_BARCODE:
-
                     byte[] BarcodeBuff = (byte[]) msg.obj;
-
                     String Barcode = "";
-
-
                     Barcode = new String(BarcodeBuff, 0, msg.arg1);
                     if (Barcode.length() != 0) {
                         //   textview.setText(Barcode);
                     }
-
                     break;
-
             }
-
-
         }
     };
+
     public void progressON(Activity activity, String message) {
 
         if (activity == null || activity.isFinishing()) {
@@ -140,6 +153,24 @@ public class BaseActivity extends AppCompatActivity{
         }
     }
 
+    public static String toNumFormat(String num) {
+        if (num.equals(""))
+            num = "0";
 
+        int number = Integer.parseInt(num.replace(",", ""));
+
+        DecimalFormat df = new DecimalFormat("#,###");
+        return df.format(number);
+    }
+
+    public static String toString(String num) {
+        if (num.equals(""))
+            num = "0";
+
+     String  number = String.valueOf(num.replace(",", ""));
+
+
+        return number;
+    }
 }
 

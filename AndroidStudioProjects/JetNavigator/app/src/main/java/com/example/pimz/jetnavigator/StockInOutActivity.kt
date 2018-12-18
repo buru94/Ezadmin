@@ -6,12 +6,9 @@ import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 
-import android.widget.ArrayAdapter
 import com.PointMobile.PMSyncService.BluetoothChatService
 import com.PointMobile.PMSyncService.SendCommand
 import kotlinx.android.synthetic.main.activity_stock_in_out.*
-import kotlinx.android.synthetic.main.activity_trans.*
-import kotlinx.android.synthetic.main.app_bar_main.*
 
 
 class StockInOutActivity:AppCompatActivity(){
@@ -49,12 +46,10 @@ class StockInOutActivity:AppCompatActivity(){
         title = "재고관리 > " + value
 //        actionBar.subtitle = "pimz"
 
-        val item = Array(20,{ i -> "$i + list" })
+        //val item = Array(20,{ i -> "$i + list" })
 
-        STOCK_ACTIVITY_LIST_VIEW.adapter = ListViewAdapter(this,item)
-        val header = layoutInflater.inflate(R.layout.search_list_view_header,null,false)
+        //STOCK_ACTIVITY_LIST_VIEW.adapter = ListViewAdapter(this,item)
 
-        STOCK_ACTIVITY_LIST_VIEW.addHeaderView(header)
 
     }
     public override fun onPause() {

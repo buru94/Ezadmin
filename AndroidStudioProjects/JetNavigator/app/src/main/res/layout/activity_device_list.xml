@@ -15,7 +15,7 @@
         android:gravity="center_vertical"
         android:textSize="20dp"
         android:background="@color/pink"
-        android:text="@string/title_paired_devices"
+        android:text="페어링된 기기"
         android:textColor="@color/white"
         android:visibility="gone" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_white"
         style="@style/Menu_Button"
-        android:text="@string/button_scan" />
+        android:text="기기찾기" />
     </RelativeLayout>
 </LinearLayout>
       

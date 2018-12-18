@@ -10,6 +10,8 @@
     <LinearLayout
             android:id="@+id/PRODUCT_LIST_ACTIVITY_LINEARLAYOUT"
             android:background="#484848"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <Spinner

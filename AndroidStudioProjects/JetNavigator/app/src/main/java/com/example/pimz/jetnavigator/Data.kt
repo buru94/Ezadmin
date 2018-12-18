@@ -7,7 +7,7 @@ import org.json.JSONObject
 import java.util.*
 
 
-public class Data {
+class Data {
 
     var authcode: String? = null
     var errorcode: Int? = null

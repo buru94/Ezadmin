@@ -25,13 +25,13 @@
             android:icon="@drawable/equalizer"
             android:title="상품관리" />
         <item
-                android:id="@+id/nav_quality_manage"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="설정" />
+            android:id="@+id/nav_quality_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="설정" />
 
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="">
         <menu>
             <item
                 android:id="@+id/nav_logout"

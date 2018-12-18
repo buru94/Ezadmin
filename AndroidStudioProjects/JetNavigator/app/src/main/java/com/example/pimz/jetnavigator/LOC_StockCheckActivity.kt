@@ -2,7 +2,6 @@ package com.example.pimz.jetnavigator
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_stock_log.*
 import kotlinx.android.synthetic.main.invoice_listview.*
 
 class LOC_StockCheckActivity : AppCompatActivity() {
@@ -16,6 +15,5 @@ class LOC_StockCheckActivity : AppCompatActivity() {
         val item = Array(20,{ i -> "$i + list" })
 
 
-        INVOICE_LISTVIEW.adapter = ListViewAdapter(this,item)
     }
 }
